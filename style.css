@@ -27,16 +27,21 @@
 }
 
 .content {
+  background-color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 80%;
 }
+
+.recipe-image-container {
+  padding-bottom: 20px;
+}
+
 .recipe-image {
   max-width: 100vw; /*consider changing to width */
   height: auto;
-  padding-bottom: 20px;
 }
 
 .title {
@@ -58,9 +63,9 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   border-radius: 10px;
   margin-bottom: 20px;
+  padding-left: 30px;
 }
 
 .prep-time-inner {
@@ -153,4 +158,27 @@ td {
 .row-value {
   color: hsl(14, 45%, 36%);
   font-weight: 600;
+}
+
+@media (min-width: 768px) {
+  .page-container {
+    background-color: hsl(30, 54%, 90%);
+  }
+  .content {
+    width: 600px;
+    margin: 100px;
+    padding: 30px;
+    border-radius: 15px;
+  }
+
+  .recipe-image {
+    width: 100%;
+    border-radius: 10px;
+  }
+  .title {
+    align-self: flex-start;
+  }
+  .prep-time-container {
+    width: 95%;
+  }
 }
